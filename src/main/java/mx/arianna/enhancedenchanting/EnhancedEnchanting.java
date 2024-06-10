@@ -4,6 +4,7 @@ import mx.arianna.enhancedenchanting.commands.SetEnchantmentCostCommand;
 import mx.arianna.enhancedenchanting.commands.SetEnchantmentCostTabCompleter;
 import mx.arianna.enhancedenchanting.configuration.EnchantmentPrices;
 import mx.arianna.enhancedenchanting.gui.GUIHandler;
+import mx.arianna.enhancedenchanting.updater.UpdateChecker;
 import mx.arianna.enhancedenchanting.utils.EnhancedUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.command.PluginCommand;
@@ -16,6 +17,7 @@ public final class EnhancedEnchanting extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        new UpdateChecker(this);
         EnchantmentPrices enchantmentPrices = new EnchantmentPrices(this);
         new SetEnchantmentCostCommand(this, enchantmentPrices);
         getServer().getPluginManager().registerEvents(new GUIHandler(playerPages, forceClose, enchantmentPrices), this);

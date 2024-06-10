@@ -1,10 +1,10 @@
 name: EnhancedEnchanting
-version: '${project.version}'
+version: '1.0'
 main: mx.arianna.enhancedenchanting.EnhancedEnchanting
 api-version: '1.13'
 author: ariannna
 description: Enhances server enchantments to their maximum potential.
-website: https://www.spigotmc.org/members/ariannna.1895370/
+website: https://www.spigotmc.org/members/1895370/
 
 commands:
   setenchantcost:
