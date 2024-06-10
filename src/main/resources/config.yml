@@ -1,0 +1,118 @@
+enchantment_prices:
+  PROTECTION:
+    1: 35
+    2: 55
+    3: 75
+    4: 95
+  FIRE_PROTECTION:
+    1: 35
+    2: 55
+    3: 75
+    4: 95
+  FEATHER_FALLING:
+    1: 35
+    2: 55
+    3: 75
+    4: 95
+  BLAST_PROTECTION:
+    1: 35
+    2: 55
+    3: 75
+    4: 95
+  PROJECTILE_PROTECTION:
+    1: 35
+    2: 55
+    3: 75
+    4: 95
+  RESPIRATION:
+    1: 30
+    2: 50
+    3: 70
+  AQUA_AFFINITY:
+    1: 20
+  THORNS:
+    1: 30
+    2: 50
+    3: 70
+  DEPTH_STRIDER:
+    1: 30
+    2: 50
+    3: 70
+  FROST_WALKER:
+    1: 25
+    2: 45
+  BINDING_CURSE:
+    1: 10
+  SHARPNESS:
+    1: 35
+    2: 55
+    3: 75
+    4: 95
+    5: 115
+  SMITE:
+    1: 35
+    2: 55
+    3: 75
+    4: 95
+    5: 115
+  BANE_OF_ARTHROPODS:
+    1: 35
+    2: 55
+    3: 75
+    4: 95
+    5: 115
+  KNOCKBACK:
+    1: 20
+    2: 40
+  FIRE_ASPECT:
+    1: 25
+    2: 45
+  LOOTING:
+    1: 30
+    2: 50
+    3: 70
+  SWEEPING_EDGE:
+    1: 30
+    2: 50
+    3: 70
+  EFFICIENCY:
+    1: 35
+    2: 55
+    3: 75
+    4: 95
+    5: 115
+  SILK_TOUCH:
+    1: 20
+  UNBREAKING:
+    1: 30
+    2: 50
+    3: 70
+  FORTUNE:
+    1: 30
+    2: 50
+    3: 70
+  POWER:
+    1: 35
+    2: 55
+    3: 75
+    4: 95
+    5: 115
+  PUNCH:
+    1: 20
+    2: 40
+  FLAME:
+    1: 20
+  INFINITY:
+    1: 20
+  LUCK_OF_THE_SEA:
+    1: 30
+    2: 50
+    3: 70
+  LURE:
+    1: 30
+    2: 50
+    3: 70
+  MENDING:
+    1: 20
+  VANISHING_CURSE:
+    1: 10

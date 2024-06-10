@@ -1,0 +1,22 @@
+name: EnhancedEnchanting
+version: '${project.version}'
+main: mx.arianna.enhancedenchanting.EnhancedEnchanting
+api-version: '1.13'
+author: ariannna
+description: Enhances server enchantments to their maximum potential.
+website: https://www.spigotmc.org/members/ariannna.1895370/
+
+commands:
+  setenchantcost:
+    description: Set the cost of an enchantment
+    usage: /setenchantcost <enchantment> <level> <cost>
+    permission: enhancedenchantments.price
+    permission-message: You do not have permission to use this command.
+
+permissions:
+  enhancedenchantments.price:
+    description: Allows setting the cost of enchantments
+    default: op
+  enhancedenchanting.update:
+    description: Notifies those with the permission of updates
+    default: op
