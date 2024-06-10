@@ -7,10 +7,7 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
-import java.util.HashSet;
-import java.util.Optional;
-import java.util.Random;
-import java.util.Set;
+import java.util.*;
 
 public class EnchantmentPrices {
     private final File configFile;
@@ -83,6 +80,18 @@ public class EnchantmentPrices {
         return 0;
     }
 
+    public Map<Enchantment, Map<Integer, Integer>> getAllPrices() {
+        Map<Enchantment, Map<Integer, Integer>> allPrices = new HashMap<>();
+        for (Enchantment enchantment : Enchantment.values()) {
+            Map<Integer, Integer> prices = new HashMap<>();
+            for (int i = 1; i <= enchantment.getMaxLevel(); i++) {
+                prices.put(i, getPrice(enchantment, i));
+            }
+            allPrices.put(enchantment, prices);
+        }
+        return allPrices;
+    }
+
     private void saveConfig() {
         try {
             config.save(configFile);
@@ -93,21 +102,12 @@ public class EnchantmentPrices {
 
     private int determineCost(Enchantment enchantment, int level) {
         int maxLevel = enchantment.getMaxLevel();
-
-        // Base cost calculation
         int baseCost = 5 * level * (1 + maxLevel + level);
-
-        // Apply type-based adjustments
         int typeAdjustedCost = applyTypeAdjustment(enchantment, baseCost);
-
-        // Apply random factor to introduce some variability
-        int randomFactor = new Random().nextInt(20) - 10; // Random adjustment between -10 and +10
-
-        // Factor in global difficulty setting
+        int randomFactor = new Random().nextInt(20) - 10;
         double difficultyMultiplier = getGlobalDifficultyMultiplier();
         int finalCost = (int) ((typeAdjustedCost + randomFactor) * difficultyMultiplier);
-
-        return Math.max(finalCost, 1); // Ensure cost is at least 1
+        return Math.max(finalCost, 1);
     }
 
     private int applyTypeAdjustment(Enchantment enchantment, int cost) {
@@ -117,8 +117,6 @@ public class EnchantmentPrices {
     }
 
     private double getGlobalDifficultyMultiplier() {
-        return 1.1; // Slight increase in cost for higher difficulty
+        return 1.1;
     }
-
-
 }

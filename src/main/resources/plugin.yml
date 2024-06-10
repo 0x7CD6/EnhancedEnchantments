@@ -7,16 +7,26 @@ description: Enhances server enchantments to their maximum potential.
 website: https://www.spigotmc.org/members/1895370/
 
 commands:
-  setenchantcost:
-    description: Set the cost of an enchantment
-    usage: /setenchantcost <enchantment> <level> <cost>
-    permission: enhancedenchantments.price
+  ee:
+    description: Main command for Enhanced Enchanting
+    usage: /ee <setprice|list|reload|info>
+    aliases: [enhancedenchanting]
+    permission: enhancedenchantments.use
     permission-message: You do not have permission to use this command.
 
 permissions:
+  enhancedenchantments.use:
+    description: Allows use of the /ee command
+    default: true
   enhancedenchantments.price:
-    description: Allows setting the cost of enchantments
+    description: Allows setting enchantment prices with /ee setprice
     default: op
-  enhancedenchanting.update:
-    description: Notifies those with the permission of updates
+  enhancedenchantments.list:
+    description: Allows listing all enchantments and prices with /ee list
+    default: true
+  enhancedenchantments.reload:
+    description: Allows reloading the plugin configuration with /ee reload
     default: op
+  enhancedenchantments.info:
+    description: Allows viewing information about specific enchantments with /ee info
+    default: true
