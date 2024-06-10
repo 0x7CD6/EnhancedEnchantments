@@ -30,3 +30,6 @@ permissions:
   enhancedenchantments.info:
     description: Allows viewing information about specific enchantments with /ee info
     default: true
+  enhancedenchanting.update:
+    description: Notifications on updates.
+    default: op
